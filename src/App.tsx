@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { SimulationProvider } from "./context/SimulationContext";
 import { useSimulation } from "./hooks/useSimulation";
 import { useAnimation } from "./hooks/useAnimation";
@@ -295,6 +296,7 @@ export default function App() {
   return (
     <SimulationProvider>
       <AppLayout />
+      <Analytics />
     </SimulationProvider>
   );
 }
